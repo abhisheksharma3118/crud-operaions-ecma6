@@ -1,0 +1,67 @@
+{
+  "name": "hero-api",
+  "version": "1.0.0",
+  "description": "A simple  api for the purpose of learning API development under the REST paradigm",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1,
+      "no-param-reassign": 0,
+      "no-duplicate-imports": 0,
+      "import/no-extraneous-dependencies": 0,
+      "no-use-before-define": 0,
+      "arrow-body-style": 0,
+      "object-curly-spacing": 0,
+      "arrow-parens": 0,
+      "import/prefer-default-export": 0,
+      "no-underscore-dangle": 0,
+      "newline-per-chained-call": 0,
+      "max-len": [
+        "error",
+        {
+          "code": 150,
+          "ignoreTrailingComments": true
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "alert-node": "^1.2.1",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "nodemon": "^1.11.0"
+  }
+}
